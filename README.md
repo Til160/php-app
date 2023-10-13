@@ -1,21 +1,17 @@
-# PHP App Example
+Lancer la commande "docker build ." pour lancer le build du conteneur
 
-## Requirements To Run Test
-1. Composer
-2. PHP7
-3. PHP Sockets Extensions Installed
+Lancer ensuite "docker compose up -d" pour lancer le conteneur
 
+Lancer "docker ps" pour récupérer l'id du conteneur qui vient d'être créé
 
-## Video Processing and RabbitMQ
-#### Overview
-The services shows a basic example of how to create a service for processing videos with RabbitMQ.
+Lancer "docker exec -it conatiner_id bash" en remplacant container_id avec l'id du conteneur que vous avez récupéré
 
-#### How To Run
-1. Ensure RabbitMQ is installed and running locally
-3. Run `composer install` to install required packages
-4. Open up two tabs in your console
-5. In one tab, run `php server.php`
-6. In the other tab, run `php client.php`
+Une fois dans le terminal du conteneur, lancer "php server.php"
 
-## Source
-<https://github.com/ProdigyView-Toolkit/Microservices-Examples-PHP>
+Dans un 2ème terminal, par exemple sur vscode, lancer "docker exec -it container_id bash" en templacant container_id avec l'id du conteneur que vous avez récupéré
+
+Une fois dans le terminal du conteneur, lancer "php client.php"
+
+Lancer "ls"
+
+On voit que la vidéo s'est téléchargé
